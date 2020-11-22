@@ -1,7 +1,7 @@
 ## List of workshops
 
 - [Installation](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/01-install.md)
-- Create service and route
+- [Create service and route](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/02-create-service-and-route.md)
 - Working with plugins
   - Authentication
   - Security
