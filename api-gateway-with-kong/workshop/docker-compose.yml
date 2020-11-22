@@ -78,3 +78,8 @@ services:
     ports:
       # - 127.0.0.1:1337:1337
       - 1337:1337   
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.10.0
+    container_name: logstash
+    restart: always
