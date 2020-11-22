@@ -1,4 +1,4 @@
-## Working with [Load balancing](https://docs.konghq.com/getting-started-guide/2.2.x/load-balancing/)
+## Working with [Load balancing](https://docs.konghq.com/2.2.x/loadbalancing/)
 
 ### Step 1 :: Create upstream services
 ```
