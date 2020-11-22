@@ -65,3 +65,5 @@ Delete service
 ```
 $curl -X DELETE 'http://127.0.0.1:8001/services/<service-id>'
 ```
+
+[Next :: Rate Limit your API](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/03-rate-limit.md)
