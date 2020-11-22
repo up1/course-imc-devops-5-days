@@ -62,3 +62,5 @@ $curl -X POST http://<admin-hostname>:8001/consumers/<consumer>/plugins \
     --data "config.hour=10000" \
     --data "config.policy=local"
 ```
+
+[Next :: Proxy caching](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/04-proxy-cache.md)
