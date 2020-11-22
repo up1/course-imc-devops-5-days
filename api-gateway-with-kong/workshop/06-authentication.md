@@ -47,3 +47,4 @@ $curl --location --request GET 'http://127.0.0.1/apis/users' \
 --header 'Authorization: Basic dXNlcjAxOnBhc3MwMQ=='
 ```
 
+[Next :: Logging with ELK stack](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/07-logging.md)
