@@ -29,3 +29,5 @@ X-Kong-Proxy-Latency: 1
 ```
 $curl -i -X DELETE http://127.0.0.1:8001/proxy-cache
 ```
+
+[Next :: Load balancing](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/05-load-balancing.md)
