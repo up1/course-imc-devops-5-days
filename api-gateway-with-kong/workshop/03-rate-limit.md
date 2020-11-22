@@ -15,6 +15,15 @@ $curl -i -X POST http://127.0.0.1:8001/plugins \
 
 Try call APIs from routes
 ```
+$curl -i -X GET http://127.0.0.1:80/apis/users/1
+
+X-RateLimit-Remaining-Minute: 4
+X-RateLimit-Limit-Minute: 5
+RateLimit-Remaining: 4
+RateLimit-Limit: 5
+RateLimit-Reset: 16
+
+
 $curl 127.0.0.1
 
 {
