@@ -26,4 +26,6 @@ $curl -X POST http://127.0.0.1:8001/upstreams/upstream/targets \
 $curl -i -X GET http://127.0.0.1:80/apis/users/1
 ```
 
-*** check protocol=http of Demo-service ***
+*** check `protocol=http` of Demo-service ***
+
+[Next :: Basic authentication](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/06-authentication.md)
