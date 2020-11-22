@@ -32,4 +32,4 @@ $docker-compose up -d konga
 
 Open Konga GUI at `http://127.0.0.1:1337`
 
-[Next :: Create services and routes](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/01-install.md)
+[Next :: Create services and routes](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/02-create-service-and-route.md)
