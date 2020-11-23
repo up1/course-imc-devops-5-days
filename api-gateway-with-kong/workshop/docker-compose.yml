@@ -1,6 +1,9 @@
 version: '3.7'
 
 services:
+  api:
+    image: nginx
+    
   kong-database:
     image: postgres:12-alpine
     container_name: kong-database
@@ -20,7 +23,7 @@ services:
   migrations:
     depends_on:
       - kong-database
-    image: kong
+    image: kong:latest
     container_name: kong-migrations
     environment:
       - KONG_DATABASE=postgres
