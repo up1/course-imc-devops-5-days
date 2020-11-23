@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  kong-db-less:
+    image: kong:latest
+    restart: always
+    container_name: kong-db-less
+    environment:
+      - KONG_DATABASE=off
+      - KONG_DECLARATIVE_CONFIG=/etc/kong/conf.d/kong.yml
+      - KONG_ADMIN_LISTEN=0.0.0.0:8001
+      - KONG_LOG_LEVEL=debug
+      - KONG_ADMIN_ERROR_LOG=/dev/stderr
+    volumes:
+      - ./conf.d:/etc/kong/conf.d
+    ports:
+      - 80:8000
+      - 443:8443
+      - 8001:8001
+
+  config-init:
+    image: kong:latest
+    working_dir: /etc/kong/conf.d
+    volumes:
+      - ./conf.d:/etc/kong/conf.d
+    command: kong config init kong.yml -vv
