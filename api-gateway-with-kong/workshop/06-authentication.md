@@ -4,7 +4,7 @@
 
 ### Step 1 :: Add [basic-auth plugin](https://docs.konghq.com/hub/kong-inc/basic-auth/) to service
 ```
-$curl -X POST http://http://127.0.0.1:8001/services/<service>/plugins \
+$curl -X POST http://127.0.0.1:8001/services/<service>/plugins \
     --data "name=basic-auth"  \
     --data "config.hide_credentials=true"
 ```
@@ -16,7 +16,7 @@ $curl --location --request GET 'http://127.0.0.1:8001/services/demo_service/plug
 
 ### Step 2 :: Create consumer
 ```
-$curl -X POST http://http://127.0.0.1:8001/consumers \
+$curl -X POST http://127.0.0.1:8001/consumers \
     --data "username=demo-name"  \
     --data "custom_id=100"
 ```
@@ -28,10 +28,9 @@ $curl --location --request GET 'http://127.0.0.1:8001/consumers'
 
 ### Step 3 :: Create credential
 ```
-$curl -X POST 'http://127.0.0.1:8001/consumers/demo-name/basic-auth' \
-  --header 'Content-Type: application/json' \
-  --data "username=user01"  \
-  --data "password=pass01"
+$curl -X POST http://127.0.0.1:8001/consumers/demo-name/basic-auth \
+    --data "username=user01" \
+    --data "password=pass01"
 ```
 
 ### Step 4 :: Verify target with basic-auth
