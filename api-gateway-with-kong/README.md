@@ -14,5 +14,7 @@
 
 ## Softwares requirement
 
-- Docker
-- Postman
+- [Docker](https://www.docker.com/)
+- [Git](https://git-scm.com/)
+- [jq :: JSON processor CLI](https://stedolan.github.io/jq/)
+- [Postman](https://www.postman.com/downloads/)
