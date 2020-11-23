@@ -1,7 +1,7 @@
 ## List of workshops
 
 - Installation
-  * [Data store]((https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/01-install.md))
+  * [Data store](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/01-install.md)
   * [DB-less](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/workshop-kong-with-dbless.md)
 - [Create service and route](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/02-create-service-and-route.md)
 - Working with plugins
