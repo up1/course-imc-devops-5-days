@@ -14,6 +14,13 @@ $docker-compose up migrations
 $docker-compose ps
 ```
 
+Access to database
+```
+$docker-compose exec kong-database bash
+$psql -U kong -W
+```
+
+
 ### Step 3 :: Install Kong server
 
 ```
