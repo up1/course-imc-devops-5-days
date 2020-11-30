@@ -3,7 +3,9 @@ version: '3.7'
 services:
   api:
     image: nginx
-    
+    # docker-compose up -d api
+    # docker-compose ps
+  
   kong-database:
     image: postgres:12-alpine
     container_name: kong-database
@@ -19,7 +21,10 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-
+  api2:
+    image: somkiat/hello
+    ports:
+      - 8080:8000
   migrations:
     depends_on:
       - kong-database
