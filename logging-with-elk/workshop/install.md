@@ -18,6 +18,8 @@ $docker-compose logs --follow
 * Check kibana => server-ip:5601
 
 Start Logstash with Sample Data
+* Config of logstahs in folder `pipeline`
+* Data in folder `data`
 ```
 $docker-compose up -d logstash
 $docker-compose ps
