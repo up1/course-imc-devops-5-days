@@ -1,6 +1,6 @@
 ## Install ELK with Docker (Single node)
 
-Start Elasticsearch
+Start [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html)
 ```
 $docker-compose up -d elasticsearch
 $docker-compose ps
