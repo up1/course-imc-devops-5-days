@@ -17,6 +17,6 @@
 * [Query DSL](https://github.com/up1/course-imc-devops-5-days/blob/main/logging-with-elk/workshop/search-dsl.md)
 * Operations
   * [Backup and Restore](https://github.com/up1/course-imc-devops-5-days/blob/main/logging-with-elk/workshop/backup-and-restore.md)
-  * Monitoring
+  * [Monitoring](https://github.com/up1/course-imc-devops-5-days/blob/main/logging-with-elk/workshop/monitoring.md)
 * Scale elasticsearch cluster
 * Working with Logstash and Beat
