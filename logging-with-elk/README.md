@@ -14,7 +14,7 @@
     * Heap size
     * Cluster backup
 * [CRUD operations](https://github.com/up1/course-imc-devops-5-days/blob/main/logging-with-elk/workshop/crud.md)
-* Query DSL
+* [Query DSL](https://github.com/up1/course-imc-devops-5-days/blob/main/logging-with-elk/workshop/search-dsl.md)
 * Operations
   * Monitoring
   * Backup and Restore
