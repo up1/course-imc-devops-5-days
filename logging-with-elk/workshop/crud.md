@@ -65,6 +65,7 @@ GET /store/_search
 ```
 
 ## Search and filter !!
+```
 GET store/_search
 {
   "query": {
@@ -86,7 +87,7 @@ GET store/_search
     }
   }
 }
-
+```
 
 ## Search with phrase
 ```
