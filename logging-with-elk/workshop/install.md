@@ -24,4 +24,6 @@ $docker-compose ps
 $docker-compose logs --follow
 ```
 
-* Check data in Elasticsearch => <server ip>:9200/logstash/_search
+Check data in Elasticsearch
+* <server ip>:9200/_cat/indices
+* <server ip>:9200/logstash/_search
