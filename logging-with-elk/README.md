@@ -15,6 +15,8 @@
     * Cluster backup
 * CRUD operations
 * Query DSL
-* Backup and Restore
-* Update index API
+* Operations
+ * Monitoring
+ * Backup and Restore
+ * Update index API
 * Working with Logstash and Beat
