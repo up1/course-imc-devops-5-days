@@ -14,8 +14,8 @@ $docker-compose ps
 $docker-compose logs --follow
 ```
 
-* Check elasticsearch => <server ip>:9200
-* Check kibana => <server ip>:5601
+* Check elasticsearch => server-ip:9200
+* Check kibana => server-ip:5601
 
 Start Logstash with Sample Data
 ```
@@ -25,5 +25,5 @@ $docker-compose logs --follow
 ```
 
 Check data in Elasticsearch
-* <server ip>:9200/_cat/indices
-* <server ip>:9200/logstash/_search
+* server-ip:9200/_cat/indices
+* server-ip:9200/logstash/_search
