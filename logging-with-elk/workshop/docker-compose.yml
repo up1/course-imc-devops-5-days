@@ -6,7 +6,8 @@ services:
     container_name: elasticsearch
     restart: always
     environment:
-      discovery.type: single-node
+      - discovery.type=single-node
+      - xpack.monitoring.collection.enabled=true
     ports: 
       - 9200:9200
 
@@ -25,3 +26,51 @@ services:
     volumes:
       - ./pipeline:/usr/share/logstash/pipeline:ro
       - ./data:/demo/data:ro
+
+  metricbeat:
+    image: docker.elastic.co/beats/metricbeat:7.10.0
+    hostname: "{{.Node.Hostname}}-metricbeat"
+    user: root
+    configs:
+      - source: mb_config
+        target: /usr/share/metricbeat/metricbeat.yml
+    volumes:
+      - /proc:/hostfs/proc:ro
+      - /sys/fs/cgroup:/hostfs/sys/fs/cgroup:ro
+      - /:/hostfs:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - metricbeat:/usr/share/metricbeat/data
+    environment:
+      - ELASTICSEARCH_HOST=elasticsearch:9200
+      - KIBANA_HOST=kibana:5601
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=changeme
+
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:7.10.0
+    hostname: "{{.Node.Hostname}}-filebeat"
+    user: root
+    configs:
+      - source: fb_config
+        target: /usr/share/filebeat/filebeat.yml
+    volumes:
+      - filebeat:/usr/share/filebeat/data
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/containers/:/var/lib/docker/containers/:ro
+      - /var/log/:/var/log/:ro
+      # - /var/log/audit/:/var/log/audit/:ro
+    environment:
+      - ELASTICSEARCH_HOST=elasticsearch:9200
+      - KIBANA_HOST=kibana:5601
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=changeme
+
+volumes:
+  metricbeat:
+  filebeat:
+
+configs:
+  mb_config:
+    file: $PWD/metricbeat/metricbeat.yml
+  fb_config:
+    file: $PWD/filebeat/filebeat.yml
