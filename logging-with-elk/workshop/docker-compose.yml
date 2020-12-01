@@ -24,3 +24,4 @@ services:
     restart: always
     volumes:
       - ./pipeline:/usr/share/logstash/pipeline:ro
+      - ./data:/demo/data:ro
