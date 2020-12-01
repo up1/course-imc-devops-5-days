@@ -1,0 +1,4 @@
+.DS_Store
+*.key
+mongo_data/
+pg_data/
