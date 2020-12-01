@@ -172,6 +172,7 @@ GET /store/_search
 ```
 
 ## Search with a single term
+```
 GET /store/_search
 {
   "query": {
