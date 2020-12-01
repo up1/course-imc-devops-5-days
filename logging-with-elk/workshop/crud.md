@@ -89,16 +89,19 @@ GET store/_search
 
 
 ## Search with phrase
-
+```
 GET /store/_search
 {
         "query" : {
             "match_phrase" : {
                 "title" : "open source"
             }
-} }
+        } 
+}
+```
 
 ## Search with highlight
+```
 GET /store/_search
 {
         "query" : {
@@ -112,8 +115,10 @@ GET /store/_search
             }
         }
 }
+```
 
 ## Search with aggregation !!
+```
 GET /store/_search
 {
   "aggs": {
@@ -141,6 +146,7 @@ GET /store/_search
     }
   }
 }
+```
 
 ## More operations
 
