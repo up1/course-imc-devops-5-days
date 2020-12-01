@@ -2,3 +2,4 @@
 *.key
 mongo_data/
 pg_data/
+*ANSWER.pdf
