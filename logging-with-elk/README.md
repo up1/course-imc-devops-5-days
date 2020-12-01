@@ -18,5 +18,5 @@
 * Operations
   * Monitoring
   * Backup and Restore
-  * Update index API
+* Scale elasticsearch cluster
 * Working with Logstash and Beat
