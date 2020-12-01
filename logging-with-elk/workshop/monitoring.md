@@ -3,6 +3,8 @@
 * [Working with MetricBeat](https://www.elastic.co/guide/en/elasticsearch/reference/current/configuring-metricbeat.html)
 
 
+![](https://www.elastic.co/guide/en/elasticsearch/reference/current/monitoring/images/metricbeat.png)
+
 ## Working with Filebeat
 ```
 $docker-compose up -d filebeat
