@@ -4,7 +4,11 @@
 
 
 ## Working with Filebeat
-
+```
+$docker-compose up -d filebeat
+$docker-compose ps
+$docker-compose logs --follow
+```
 
 ## Working with MetricBeat
 
