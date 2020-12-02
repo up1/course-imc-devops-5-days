@@ -19,3 +19,5 @@
   * [Backup and Restore](https://github.com/up1/course-imc-devops-5-days/blob/main/logging-with-elk/workshop/backup-and-restore.md)
   * [Monitoring](https://github.com/up1/course-imc-devops-5-days/blob/main/logging-with-elk/workshop/monitoring.md)
 * Scale elasticsearch cluster
+  * [Simple cluster](https://github.com/up1/course-imc-devops-5-days/blob/main/monitoring-with-prometheus-grafana/workshop/elk-cluster.md)
+  * [Simple cluster with node roles](https://github.com/up1/course-imc-devops-5-days/blob/main/monitoring-with-prometheus-grafana/workshop/elk-cluster-role.md)
