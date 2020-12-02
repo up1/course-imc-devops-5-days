@@ -6,9 +6,19 @@ global:
   external_labels:
     monitor: 'devops-franken'
 
+# Load and evaluate rules in this file every 'evaluation_interval' seconds.
 rule_files:
   - "alert.rules"
 
+# alert
+alerting:
+  alertmanagers:
+  - scheme: http
+    static_configs:
+    - targets:
+      - "alertmanager:9093"
+
+# A scrape configuration containing exactly one endpoint to scrape:
 scrape_configs:
   - job_name: 'sandbox'
     static_configs:

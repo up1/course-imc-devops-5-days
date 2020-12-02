@@ -10,17 +10,11 @@ services:
     ports:
       - "9100:9100"
 
-  prometheus:
-    image: prom/prometheus
-    volumes:
-      - ./prometheus/:/etc/prometheus/
-      - ./prometheus/data:/data
-    command:
-      - '-config.file=/etc/prometheus/prometheus.yml'
-      - '-storage.local.path=/data'
-      - '-alertmanager.url=http://alertmanager:9093'
+  mailhog:
+    image: mailhog/mailhog
     ports:
-      - "9090:9090"
+      - 1025:1025
+      - 8025:8025
 
   alertmanager:
     image: prom/alertmanager
@@ -30,10 +24,19 @@ services:
       - ./alertmanager/config.yml:/etc/alertmanager/config.yml
       - ./alertmanager/data:/data
     command:
-      - '-config.file=/etc/alertmanager/config.yml'
-      - '-storage.path=/data'
-    links:
-      - mailhog
+      - '--config.file=/etc/alertmanager/config.yml'
+      - '--storage.path=/data'
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+      - ./prometheus/data:/data
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/data'
+    ports:
+      - "9090:9090"
 
   grafana:
     image: grafana/grafana
@@ -53,10 +56,5 @@ services:
       - /dev/disk/:/dev/disk:ro
     ports:
       - "8080:8080"
-      
-  mailhog:
-    image: mailhog/mailhog
-    ports:
-      - 1025:1025
-      - 8025:8025
+
 
