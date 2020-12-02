@@ -1,6 +1,6 @@
 # Elasticsearch cluster
 
-## Simple cluster with [node roles](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html)
+## Simple cluster with [node roles](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html) and [Data Tier](https://www.elastic.co/guide/en/elasticsearch/reference/master/data-tiers.html#hot-tier)
 * es01 => Master node
 * es02 => Data node
 * eso3 => Hot node (For indexing and search for tike-series data)
