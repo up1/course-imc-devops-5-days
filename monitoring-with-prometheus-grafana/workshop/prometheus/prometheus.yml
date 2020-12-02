@@ -1,0 +1,21 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+  # added when sending things to external systems (alerts)
+  external_labels:
+    monitor: 'devops-franken'
+
+rule_files:
+  - "alert.rules"
+
+scrape_configs:
+  - job_name: 'sandbox'
+    static_configs:
+    - targets: ['prometheus:9090','cadvisor:8080','node-exporter:9100']
+      labels:
+        environment: development
+
+# more options:
+# https://prometheus.io/docs/operating/configuration/
+
