@@ -1,6 +1,6 @@
 # Introduction to Apache Kafka
 
-## Start Kafka server + Zookepper
+## Start Kafka server + Zookeeper
 ```
 $docker-compose up -d
 $docker-compose ps
