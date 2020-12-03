@@ -2,19 +2,21 @@
 
 ## Start Kafka server + Zookeeper
 ```
-$docker-compose up -d
-$docker-compose ps
-$docker-compose logs --follow
+docker network create demo_network
+docker-compose up -d zookeeper
+docker-compose up -d kafka
+docker-compose ps
+docker-compose logs --follow
 ```
 
 Scale Kafka
 ```
-$docker-compose scale kafka=3
+docker-compose scale kafka=3
 ```
 
 ## Hello Kafka
 ```
-./start-kafka-shell.sh  <server ip 1>  <server ip 2>:2181
+./start-kafka-shell.sh  <server ip 1>  zookeeper:2181
 ```
 * server ip 1 = HOST_IP
 * server ip 2 = ZK_IP

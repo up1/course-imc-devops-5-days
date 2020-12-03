@@ -9,7 +9,7 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_ADVERTISED_PORT: 9092
     networks:
-     - demo
+     - demo_netowrk
       
   zookeeper:
     image: wurstmeister/zookeeper
@@ -17,8 +17,9 @@ services:
     ports:
       - "2181:2181"
     networks:
-     - demo
+     - demo_netowrk
 
 networks:
-  demo:
+  demo_netowrk:
+    name: demo_netowrk
     driver: bridge
