@@ -13,4 +13,5 @@
 
 
 ## Resources
+* [Alert manager config file](https://github.com/prometheus/alertmanager/blob/master/doc/examples/simple.yml)
 * [zabbix :: collect data from Node Exporter](https://www.zabbix.com/integrations/prometheus)
