@@ -116,4 +116,5 @@ Check data
 * Endpoint of Node Expoter = http://server-ip:9100
 * Alert Manager UI = http://server-ip:9093
 * Prometheus UI = http://server-ip:9090
+* Karma UI = http://server-ip:8888
 

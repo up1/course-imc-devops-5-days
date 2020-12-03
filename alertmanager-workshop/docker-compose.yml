@@ -53,4 +53,12 @@ services:
     ports:
       - "8080:8080"
 
+  karma:
+    image: ghcr.io/prymitive/karma
+    environment:
+      - ALERTMANAGER_URI=http://alertmanager:9093
+    ports:
+      - "8888:8080"
+
+
 
