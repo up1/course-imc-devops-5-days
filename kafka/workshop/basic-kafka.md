@@ -62,7 +62,16 @@ $KAFKA_HOME/bin/kafka-console-consumer.sh --topic=hello --group group1 --from-be
 
 ```
 
-Group 2 in window 2
+Group 1 in window 2
+```
+./start-kafka-shell.sh  <server ip>  <server ip>:2181
+
+$KAFKA_HOME/bin/kafka-console-consumer.sh --topic=hello --group group1 --from-beginning --bootstrap-server $HOST_IP:9092
+
+```
+
+
+Group 2 in window 3
 ```
 ./start-kafka-shell.sh  <server ip>  <server ip>:2181
 
