@@ -7,3 +7,7 @@
   * [Alerting rules](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)
 * Install Grafana to visualize data from Prometheus
 * Containers metrics collector with [CAdvisor](https://github.com/google/cadvisor)
+
+
+## Resources
+* [zabbix :: collect data from Node Exporter](https://www.zabbix.com/integrations/prometheus)
