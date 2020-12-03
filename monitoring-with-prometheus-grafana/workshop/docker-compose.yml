@@ -29,6 +29,7 @@ services:
 
   prometheus:
     image: prom/prometheus
+    user: "0:0"
     volumes:
       - ./prometheus/:/etc/prometheus/
       - ./prometheus/data:/data
@@ -40,6 +41,7 @@ services:
 
   grafana:
     image: grafana/grafana
+    user: "0:0"
     ports:
       - "3000:3000"
     volumes:
