@@ -2,7 +2,6 @@
 
 ## Start Kafka server + Zookeeper
 ```
-docker network create demo_network
 docker-compose up -d zookeeper
 docker-compose up -d kafka
 docker-compose ps
