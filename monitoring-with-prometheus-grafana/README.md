@@ -10,6 +10,12 @@
 * Working with Kong
   - [Logging with ELK](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/07-logging.md)
   - [Monitoring with Prometheus](https://github.com/up1/course-imc-devops-5-days/blob/main/api-gateway-with-kong/workshop/08-monitoring.md)
+* Alert manager workshop
+  * Working with Prometheus + Grafana
+  * Alert rules
+  * Notification with Slack and LINE
+  * [Awesome prometheus alerts](https://awesome-prometheus-alerts.grep.to/)
+  
 
 
 ## Resources
