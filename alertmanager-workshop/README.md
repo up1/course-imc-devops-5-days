@@ -61,6 +61,7 @@ alerting:
 * [Slack webhooks](https://slack.com/intl/en-th/help/articles/115005265063-Incoming-webhooks-for-Slack)
 * [LINE Bot](https://line.me/en/)
 * Zabbix
+  * https://github.com/devopyio/zabbix-alertmanager
   * [Using web hooks](https://prometheus.io/docs/alerting/latest/configuration/#webhook_config)
   * [Reference](https://devopy.io/setting-up-zabbix-alertmanager-integration/)
 
@@ -117,4 +118,8 @@ Check data
 * Alert Manager UI = http://server-ip:9093
 * Prometheus UI = http://server-ip:9090
 * Karma UI = http://server-ip:8888
+
+
+## References
+* [Karma :: Alert Dashboard](https://karma-dashboard.io/)
 
