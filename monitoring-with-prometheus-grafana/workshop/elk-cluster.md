@@ -2,6 +2,7 @@
 
 ## Simple cluster (Default roles in 3 nodes)
 ```
+$sysctl -w vm.max_map_count=262144
 $docker-compose -f docker-compose-elk-01.yml up -d
 $docker-compose -f docker-compose-elk-01.yml ps
 
