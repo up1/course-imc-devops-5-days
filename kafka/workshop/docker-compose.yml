@@ -20,6 +20,6 @@ services:
      - demo_network
 
 networks:
-  demo_netowrk:
+  demo_network:
     name: demo_network
     driver: bridge
