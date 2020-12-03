@@ -15,10 +15,8 @@ docker-compose scale kafka=3
 
 ## Hello Kafka
 ```
-./start-kafka-shell.sh  <server ip 1>  zookeeper:2181
+./start-kafka-shell.sh  kafka  zookeeper:2181
 ```
-* server ip 1 = HOST_IP
-* server ip 2 = ZK_IP
 
 ## Create new Topic = hello
 ```
@@ -41,14 +39,14 @@ $KAFKA_HOME/bin/kafka-console-producer.sh --topic=hello --broker-list=`broker-li
 
 Consumer 1 in window 1
 ```
-./start-kafka-shell.sh  <server ip>  <server ip>:2181
+./start-kafka-shell.sh  kafka  zookeeper:2181
 
 $KAFKA_HOME/bin/kafka-console-consumer.sh --topic=hello --from-beginning --bootstrap-server $HOST_IP:9092
 ```
 
 Consumer 2 in window 2
 ```
-./start-kafka-shell.sh  <server ip>  <server ip>:2181
+./start-kafka-shell.sh  kafka  zookeeper:2181
 
 $KAFKA_HOME/bin/kafka-console-consumer.sh --topic=hello --from-beginning --bootstrap-server $HOST_IP:9092
 ```
@@ -57,7 +55,7 @@ $KAFKA_HOME/bin/kafka-console-consumer.sh --topic=hello --from-beginning --boots
 
 Group 1 in window 1
 ```
-./start-kafka-shell.sh  <server ip>  <server ip>:2181
+./start-kafka-shell.sh  kafka  zookeeper:2181
 
 $KAFKA_HOME/bin/kafka-console-consumer.sh --topic=hello --group group1 --from-beginning --bootstrap-server $HOST_IP:9092
 
@@ -65,7 +63,7 @@ $KAFKA_HOME/bin/kafka-console-consumer.sh --topic=hello --group group1 --from-be
 
 Group 1 in window 2
 ```
-./start-kafka-shell.sh  <server ip>  <server ip>:2181
+./start-kafka-shell.sh  kafka  zookeeper:2181
 
 $KAFKA_HOME/bin/kafka-console-consumer.sh --topic=hello --group group1 --from-beginning --bootstrap-server $HOST_IP:9092
 
@@ -74,7 +72,7 @@ $KAFKA_HOME/bin/kafka-console-consumer.sh --topic=hello --group group1 --from-be
 
 Group 2 in window 3
 ```
-./start-kafka-shell.sh  <server ip>  <server ip>:2181
+./start-kafka-shell.sh  kafka  zookeeper:2181
 
 $KAFKA_HOME/bin/kafka-console-consumer.sh --topic=hello --group group2 --from-beginning --bootstrap-server $HOST_IP:9092
 
