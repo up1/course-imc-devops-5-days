@@ -26,6 +26,12 @@ groups:
         severity: 'critical'
 ```
 
+### Example of Alert rules
+* https://awesome-prometheus-alerts.grep.to/
+* https://github.com/samber/awesome-prometheus-alerts
+* https://github.com/roaldnefs/awesome-prometheus
+
+
 ## 2. Setup alert.rules in Prometheus server
 Edit in file `prometheus/prometheus.yml`
 ```
