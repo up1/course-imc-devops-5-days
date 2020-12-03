@@ -118,3 +118,7 @@ Check data
 * Alert Manager UI = http://server-ip:9093
 * Prometheus UI = http://server-ip:9090
 
+
+## References
+* [Karma :: Alert Dashboard](https://karma-dashboard.io/)
+
