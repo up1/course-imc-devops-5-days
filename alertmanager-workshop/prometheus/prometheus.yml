@@ -1,0 +1,31 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+  # added when sending things to external systems (alerts)
+  external_labels:
+    monitor: 'devops'
+
+# Load and evaluate rules in this file every 'evaluation_interval' seconds.
+rule_files:
+  - "alert.rules"
+
+# alert
+alerting:
+  alertmanagers:
+  - scheme: http
+    static_configs:
+    - targets:
+      - "alertmanager:9093"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+scrape_configs:
+  - job_name: 'sandbox'
+    static_configs:
+    - targets: ['prometheus:9090','cadvisor:8080','node-exporter:9100']
+      labels:
+        environment: development
+
+# more options:
+# https://prometheus.io/docs/operating/configuration/
+

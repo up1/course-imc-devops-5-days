@@ -1,0 +1,8 @@
+.DS_Store
+*.key
+mongo_data/
+pg_data/
+*ANSWER.pdf
+alertmanager/data/
+grafana/data/
+prometheus/data/

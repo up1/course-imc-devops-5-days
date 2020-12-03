@@ -1,0 +1,12 @@
+global:
+ resolve_timeout: 1m
+ pagerduty_url: 'https://events.pagerduty.com/v2/enqueue'
+
+route:
+  receiver: 'pagerduty-notifications'
+
+receivers:
+- name: 'pagerduty-notifications'
+  pagerduty_configs:
+  - service_key: 8c4248c93763441797b54b1457aa8c4e
+    send_resolved: true
