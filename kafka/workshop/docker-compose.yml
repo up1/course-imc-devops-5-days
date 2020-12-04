@@ -9,6 +9,9 @@ services:
       KAFKA_ADVERTISED_HOST_NAME: kafka
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_ADVERTISED_PORT: 9092
+      # Enable JMX remote
+      KAFKA_JMX_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=kafka -Dcom.sun.management.jmxremote.rmi.port=1099"
+      JMX_PORT: 1099
     networks:
      - demo_network
       
@@ -29,6 +32,15 @@ services:
       KAFKA_BROKERCONNECT: "kafka:2181"
     networks:
      - demo_network
+  
+  jmx-exporter:
+    image: sscaling/jmx-prometheus-exporter
+    ports:
+      - "5556:5556"
+    environment:
+      SERVICE_PORT: 5556
+    volumes:
+      - ./jmxexporter.yml:/opt/jmx_exporter/config.yml
 
 networks:
   demo_network:
