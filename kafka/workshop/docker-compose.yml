@@ -20,6 +20,16 @@ services:
     networks:
      - demo_network
 
+  kafka-exporter:
+    image: danielqsj/kafka-exporter
+    command: --kafka.server=kafka:9092
+    ports:
+      - "9308:9308"
+    environment:
+      KAFKA_BROKERCONNECT: "kafka:2181"
+    networks:
+     - demo_network
+
 networks:
   demo_network:
     name: demo_network
