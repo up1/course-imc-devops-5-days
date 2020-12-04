@@ -1,10 +1,5 @@
 # Monitoring Kafka
-<<<<<<< HEAD
-* [Kafka Exporter](https://github.com/danielqsj/kafka_exporter)
-* [JMX Exporter](https://github.com/prometheus/jmx_exporter)
 
-## Run Kafka exporter
-=======
 * [JMX Exporter](https://github.com/prometheus/jmx_exporter)
   * Export metric from JMX (Java Management Extension)
 * [Kafka Exporter](https://github.com/danielqsj/kafka_exporter)
@@ -12,8 +7,7 @@
   * Topic
   * Consumer
 
-## Run Kafka exporter for Prometheus
->>>>>>> d653ff095475b19e1981e4286bb040611e3a9493
+## Run Kafka exporter
 ```
 docker-compose up -d kafka-exporter
 docker-compose ps
@@ -21,7 +15,6 @@ docker-compose logs --follow
 ```
 
 Check result in url = server-ip:9308
-<<<<<<< HEAD
 
 ## Run JMX exporter
 
@@ -45,5 +38,3 @@ docker-compose logs --follow
 ```
 
 Check result in url = server-ip:5556
-=======
->>>>>>> d653ff095475b19e1981e4286bb040611e3a9493
