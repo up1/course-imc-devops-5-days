@@ -9,3 +9,4 @@
 
 ## Resources
 * [Kafka UI](https://github.com/obsidiandynamics/kafdrop)
+* [Apache Pulsar](https://pulsar.apache.org/)
