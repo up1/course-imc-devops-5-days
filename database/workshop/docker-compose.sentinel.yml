@@ -4,9 +4,7 @@ services:
     image: redis:6
   slave:
     image: redis:6
-    command: redis-server --slaveof redis-master 6379
-    links:
-      - master:redis-master
+    command: redis-server --slaveof master 6379
   sentinel:
     build: sentinel
     environment:

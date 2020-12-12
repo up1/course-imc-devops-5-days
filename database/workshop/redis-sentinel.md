@@ -20,11 +20,11 @@ Required minimum nodes = 3 nodes
 
 ```
 # Build image
-$docker-compose build
+$docker-compose -f docker-compose.sentinel.yml build 
 
 # Start containers
-$docker-compose up -d
+$docker-compose -f docker-compose.sentinel.yml up -d 
 
-$docker-compose ps
+$docker-compose -f docker-compose.sentinel.yml ps
 ```
 
