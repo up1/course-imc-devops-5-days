@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  master:
+    image: redis:6
+  slave:
+    image: redis:6
+    command: redis-server --slaveof redis-master 6379
+    links:
+      - master:redis-master
+  sentinel:
+    build: sentinel
+    environment:
+      - SENTINEL_DOWN_AFTER=5000
+      - SENTINEL_FAILOVER=5000
