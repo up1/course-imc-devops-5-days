@@ -3,5 +3,4 @@
 * [Logging with ELK stack](https://github.com/up1/course-imc-devops-5-days/tree/main/logging-with-elk)
 * [Monitoring with Prometheus and Grafana](https://github.com/up1/course-imc-devops-5-days/tree/main/monitoring-with-prometheus-grafana)
 * [Apache Kafka](https://github.com/up1/course-imc-devops-5-days/tree/main/kafka)
-* SQL and NoSQL
-* Tuning performance of SQL (PostgreSQL)
+* [SQL and NoSQL + Tuning performance of SQL](https://github.com/up1/course-imc-devops-5-days/tree/main/database)
