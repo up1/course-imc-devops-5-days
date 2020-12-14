@@ -19,8 +19,8 @@
 ```
 
 ## Top redis performance metrics
-#### 1. Memory Usage => used_memory, used_memory_human
-The	used_memory metric reports the total number of bytes allocated by Redis.
+#### 1. Memory Usage => `used_memory`, `used_memory_human`
+The	`used_memory metric` reports the total number of bytes allocated by Redis.
 
 ```
 >info memory
@@ -42,13 +42,46 @@ expired_keys:0
 evicted_keys:0
 ```
 
-#### 2. Number of commands processed => total_commands_processed
+#### 2. Number of commands processed => `total_commands_processed`
+The `total_commands_processed` metric gives the number of commands processed by the Redis server.
 
+```
+>info stats
+
+total_commands_processed:40019
+
+> SLOWLOG HELP
+```
+
+Tips
+* Use multi-argument commands
+  * SET -> MSET
+  * GET -> MGET
+* Use [pipeline command](https://redis.io/topics/pipelining)
+* Avoid slow commands for large sets (Big-O notation)
 
 #### 3. Latency + slowlog
+Latency measures the average time in milliseconds it takes the Redis server to respond.
 
+```
+>redis-cli --latency -h host -p port
+```
+Tips
+* Identify slow commands using slow log
+* Monitoring client connection
+* Limit client connections (`maxclients` in redis.conf)
+* Improve memoru management (Swapping will significantly increase latency)
+* Metric correlation
 
-#### 4. Memory Usage => mem_fragmentation_ratio = (OS/Redis)
+```
+>info clients
+
+connected_clients:4
+
+> SLOWLOG HELP
+```
+
+#### 4. Memory Usage => `mem_fragmentation_ratio` = (OS/Redis)
 
 
 #### 5. Evictions keys
