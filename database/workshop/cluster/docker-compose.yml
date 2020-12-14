@@ -4,28 +4,22 @@ services:
     image: redis:6
     network_mode: host
     volumes:
-      - ./config/node.conf:/usr/local/etc/redis/redis.conf
+      - ./config/node1.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf
-    environment:
-      - PORT=7000
 
   redis2:
     image: redis:6
     network_mode: host
     volumes:
-      - ./config/node.conf:/usr/local/etc/redis/redis.conf
+      - ./config/node2.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf
-    environment:
-      - PORT=7001
 
   redis3:
     image: redis:6
     network_mode: host
     volumes:
-      - ./config/node.conf:/usr/local/etc/redis/redis.conf
+      - ./config/node3.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf
-    environment:
-      - PORT=7002
 
   redis-cluster:
     tty: true
