@@ -2,41 +2,32 @@ version: '3.9'
 services:
   redis1:
     image: redis:6
+    network_mode: host
     volumes:
       - ./config/node.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf
+    environment:
+      - PORT=7000
 
   redis2:
     image: redis:6
+    network_mode: host
     volumes:
       - ./config/node.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf
+    environment:
+      - PORT=7001
 
   redis3:
     image: redis:6
+    network_mode: host
     volumes:
       - ./config/node.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf
-
-  redis4:
-    image: redis:6
-    volumes:
-      - ./config/node.conf:/usr/local/etc/redis/redis.conf
-    command: redis-server /usr/local/etc/redis/redis.conf
-
-  redis5:
-    image: redis:6
-    volumes:
-      - ./config/node.conf:/usr/local/etc/redis/redis.conf
-    command: redis-server /usr/local/etc/redis/redis.conf
-
-  redis6:
-    image: redis:6
-    volumes:
-      - ./config/node.conf:/usr/local/etc/redis/redis.conf
-    command: redis-server /usr/local/etc/redis/redis.conf
+    environment:
+      - PORT=7002
 
   redis-cluster:
     tty: true
     image: redis:6
-    command: redis-cli --cluster create redis1:7000 redis2:7000 redis3:7000 redis4:7000 redis5:7000 redis6:7000 --cluster-replicas 1
+    command: redis-cli --cluster create 127.0.0.1:7000 127.0.0.1:7001 127.0.0.1:7002 --cluster-replicas 0
