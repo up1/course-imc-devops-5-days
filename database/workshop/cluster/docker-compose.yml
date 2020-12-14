@@ -1,18 +1,6 @@
 version: '3.9'
 services:
-  redis1:
-    image: redis:6
-    volumes:
-      - ./config/node.conf:/usr/local/etc/redis/redis.conf
-    command: redis-server /usr/local/etc/redis/redis.conf
-
-  redis2:
-    image: redis:6
-    volumes:
-      - ./config/node.conf:/usr/local/etc/redis/redis.conf
-    command: redis-server /usr/local/etc/redis/redis.conf
-
-  redis3:
+  redis:
     image: redis:6
     volumes:
       - ./config/node.conf:/usr/local/etc/redis/redis.conf
