@@ -19,8 +19,28 @@
 ```
 
 ## Top redis performance metrics
-#### 1. Memory Usage => used_memory
+#### 1. Memory Usage => used_memory, used_memory_human
+The	used_memory metric reports the total number of bytes allocated by Redis.
 
+```
+>info memory
+
+used_memory:896776
+used_memory_human:875.76K
+```
+
+Tips
+* Set expirations for keys
+* Evict keys (config set maxmemory value)
+  * value = % of available memory
+  * config `maxmemory-policy` in redis.conf
+
+```
+>info stats
+
+expired_keys:0
+evicted_keys:0
+```
 
 #### 2. Number of commands processed => total_commands_processed
 
