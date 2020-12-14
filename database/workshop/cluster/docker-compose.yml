@@ -30,4 +30,5 @@ services:
   redis-cluster:
     tty: true
     image: redis:6
+    network_mode: host
     command: redis-cli --cluster create 127.0.0.1:7000 127.0.0.1:7001 127.0.0.1:7002 --cluster-replicas 0
