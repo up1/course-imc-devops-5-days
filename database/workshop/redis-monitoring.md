@@ -84,8 +84,8 @@ connected_clients:4
 #### 4. Memory Usage => `mem_fragmentation_ratio` = (OS/Redis)
 
 #### 5. Evictions keys
-* config `maxmemory` in redis.conf
-* config `maxmemory-policy` in [redis.conf](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop/example-redis.conf)
+* config `maxmemory` in [redis.conf](https://github.com/up1/course-imc-devops-5-days/blob/a0e0ab7b575a48b49a322b470c858ec821beae9e/database/workshop/example-redis.conf#L835)
+* config `maxmemory-policy` in [redis.conf](https://github.com/up1/course-imc-devops-5-days/blob/a0e0ab7b575a48b49a322b470c858ec821beae9e/database/workshop/example-redis.conf#L835)
 
 Tips
 * Increase maxmemory limit
