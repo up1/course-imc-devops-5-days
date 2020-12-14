@@ -1,6 +1,36 @@
 version: '3.9'
 services:
-  redis:
+  redis1:
+    image: redis:6
+    volumes:
+      - ./config/node.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
+
+  redis2:
+    image: redis:6
+    volumes:
+      - ./config/node.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
+
+  redis3:
+    image: redis:6
+    volumes:
+      - ./config/node.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
+
+  redis4:
+    image: redis:6
+    volumes:
+      - ./config/node.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
+
+  redis5:
+    image: redis:6
+    volumes:
+      - ./config/node.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
+
+  redis6:
     image: redis:6
     volumes:
       - ./config/node.conf:/usr/local/etc/redis/redis.conf
@@ -9,4 +39,4 @@ services:
   redis-cluster:
     tty: true
     image: redis:6
-    command: redis-cli --cluster create redis1:7000 redis2:7000 redis3:7000 --cluster-replicas 1
+    command: redis-cli --cluster create redis1:7000 redis2:7000 redis3:7000 redis4:7000 redis5:7000 redis6:7000 --cluster-replicas 1
