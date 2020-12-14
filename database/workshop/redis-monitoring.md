@@ -88,7 +88,7 @@ connected_clients:4
 * config `maxmemory-policy` in [redis.conf](https://github.com/up1/course-imc-devops-5-days/blob/a0e0ab7b575a48b49a322b470c858ec821beae9e/database/workshop/example-redis.conf#L835)
 
 Tips
-* Increase maxmemory limit
+* Increase `maxmemory` limit
 * [Partition your instance](https://redis.io/topics/partitioning)
   * Client side partition
   * Proxy assisted partition
