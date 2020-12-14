@@ -52,3 +52,15 @@ $docker-compose -f docker-compose.sentinel.yml scale slave=3
 ```
 $docker-compose -f docker-compose.sentinel.yml exec sentinel redis-cli -p 26379 SENTINEL get-master-addr-by-name mymaster
 ```
+
+## Working with redis
+
+1. Write data from to master node
+```
+$docker-compose -f docker-compose.sentinel.yml exec -T master redis-cli -p 6379 INCR counter
+```
+
+2. Read to slave node
+```
+$docker-compose -f docker-compose.sentinel.yml exec -T slave redis-cli -p 6379 GET counter
+```
