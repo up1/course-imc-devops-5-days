@@ -1,6 +1,6 @@
 ## Redis workshops
 * [Single instance](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop/redis.md)
-* Configuration
+* [Configuration](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop/redis-config.md)
 * Sentinel
 * Cluster
 * Monitoring
