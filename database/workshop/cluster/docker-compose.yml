@@ -21,4 +21,4 @@ services:
   redis-cluster:
     tty: true
     image: redis:6
-    command: redis-cli --cluster create redis1 redis2 redis3 --cluster-replicas 0
+    command: redis-cli --cluster create redis1:7000 redis2:7000 redis3:7000 --cluster-replicas 0
