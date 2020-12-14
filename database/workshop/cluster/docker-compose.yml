@@ -6,6 +6,8 @@ services:
     volumes:
       - ./config/node1.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - "7000:7000"
 
   redis2:
     image: redis:6
@@ -13,6 +15,8 @@ services:
     volumes:
       - ./config/node2.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - "7001:7001"
 
   redis3:
     image: redis:6
@@ -20,6 +24,8 @@ services:
     volumes:
       - ./config/node3.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - "7002:7002"
 
   redis-cluster:
     tty: true
