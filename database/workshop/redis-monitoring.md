@@ -19,8 +19,16 @@
 ```
 
 ## Top redis performance metrics
-* Memory Usage => used_memory
-* Number of commands processed => total_commands_processed
-* Latency + slowlog
-* Memory Usage => mem_fragmentation_ratio = (OS/Redis)
-* Evictions
+### 1. Memory Usage => used_memory
+
+
+### 2. Number of commands processed => total_commands_processed
+
+
+### 3. Latency + slowlog
+
+
+### 4. Memory Usage => mem_fragmentation_ratio = (OS/Redis)
+
+
+### 5. Evictions keys
