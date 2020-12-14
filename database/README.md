@@ -1,6 +1,8 @@
-# List of Redis workshops
+## Redis workshops
 * Single instance
 * Configuration
 * Sentinel
 * Cluster
 * Monitoring
+
+## PostgreSQL workshop
