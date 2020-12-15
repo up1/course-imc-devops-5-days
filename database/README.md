@@ -10,4 +10,4 @@
   * [Installation](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop-postgres/start.md)
   * [Explain and Analyze SQL](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop-postgres/explain-analyze.md)
   * [Working with Indexes](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop-postgres/indexes.md)
-  * [Tuning Joins]((https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop-postgres/tuning-joins.md))
+  * [Tuning Joins](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop-postgres/tuning-joins.md)
