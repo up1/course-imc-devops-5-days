@@ -107,3 +107,7 @@ workshop_prometheus_1       /bin/prometheus --config.f ...   Up      0.0.0.0:909
 workshop_redis-exporter_1   /redis_exporter                  Up      0.0.0.0:9121->9121/tcp
 workshop_redis1_1           docker-entrypoint.sh redis ...   Up      6379/tcp
 ```
+
+List of URL
+* Redis exporter = http://server-ip:9121
+* Prometheus server = http://server-ip:9090
