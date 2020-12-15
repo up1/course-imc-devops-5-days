@@ -1,7 +1,7 @@
 # Redis cluster = Replication + Shading data
 
 ## Cluster
-Required minimum nodes = 6 nodes
+Required minimum nodes = 6 nodes (production)
 * Master = 3
 * Slave = 3
 
