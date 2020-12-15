@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  redis1:
+    image: redis:6
+
+  redis-exporter:
+    image: oliver006/redis_exporter
+    ports: 
+      - 9121:9121
+    environment:
+      - REDIS_ADDR=redis://redis1:6379
+  
+  prometheus:
+    image: prom/prometheus
+    user: "0:0"
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+      - ./prometheus/data:/data
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/data'
+    ports:
+      - "9090:9090"
+  

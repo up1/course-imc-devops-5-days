@@ -1,8 +1,9 @@
 # Redis monitoring
-* Using Redis CLI
-* [Redis exporter with Prometheus](https://github.com/oliver006/redis_exporter)
+1. Using Redis CLI
+2. [Redis exporter with Prometheus](https://github.com/oliver006/redis_exporter)
 
 
+# 1. Using Redis CLI
 ```
 >redis-cli 
 >info
@@ -94,3 +95,15 @@ Tips
   * Proxy assisted partition
   * Query routing
   * Redis Cluster
+
+# 2. Redis Exporter
+
+```
+$docker-compose -f docker-compose-single.yml ps
+
+          Name                         Command               State           Ports
+-------------------------------------------------------------------------------------------
+workshop_prometheus_1       /bin/prometheus --config.f ...   Up      0.0.0.0:9090->9090/tcp
+workshop_redis-exporter_1   /redis_exporter                  Up      0.0.0.0:9121->9121/tcp
+workshop_redis1_1           docker-entrypoint.sh redis ...   Up      6379/tcp
+```

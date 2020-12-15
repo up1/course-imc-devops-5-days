@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+# A scrape configuration containing exactly one endpoint to scrape:
+scrape_configs:
+  - job_name: 'redis'
+    static_configs:
+    - targets: ['redis-exporter:9121']
+      labels:
+        environment: development
