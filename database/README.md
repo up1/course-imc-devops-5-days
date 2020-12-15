@@ -5,4 +5,6 @@
 * [Cluster](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop/redis-cluster.md)
 * [Monitoring](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop/redis-monitoring.md)
 
-## PostgreSQL workshop
+## RDBMS workshop
+* PostgreSQL
+* MariaDB
