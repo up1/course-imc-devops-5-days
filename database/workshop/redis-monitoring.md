@@ -111,3 +111,8 @@ workshop_redis1_1           docker-entrypoint.sh redis ...   Up      6379/tcp
 List of URL
 * Redis exporter = http://server-ip:9121
 * Prometheus server = http://server-ip:9090
+
+Stop and removes
+```
+$docker-compose -f docker-compose-single.yml down
+```
