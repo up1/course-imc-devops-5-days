@@ -11,3 +11,4 @@
   * [Explain and Analyze SQL](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop-postgres/explain-analyze.md)
   * [Working with Indexes](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop-postgres/indexes.md)
   * [Tuning Joins](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop-postgres/tuning-joins.md)
+  * [Partitioning data](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop-postgres/partition-data.md)
