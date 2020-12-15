@@ -1,4 +1,4 @@
-# Redis cluster
+# Redis cluster = Replication + Shading data
 
 ## Cluster
 Required minimum nodes = 6 nodes
@@ -21,7 +21,9 @@ cluster_redis3_1   docker-entrypoint.sh redis ...   Up
 
 ```
 
-## 2. Create cluster
+## 2. Create cluster with replication = 0
+* Master 3 nodes
+* Slave 0 nodes
 ```
 $docker-compose up redis-cluster
 
