@@ -1,4 +1,12 @@
 # Working with Indexes
+* B-tree
+* Bitmap
+* Hash
+* Specifics
+  * GIN (Generalized INverted indexes)
+  * BRIN (Block Range INdexes)
+  * GiST (Generalized Search Tree)
+  * SP-GiST (Space-Partitioned GiST)
 
 ## B-tree indexes
 ```
