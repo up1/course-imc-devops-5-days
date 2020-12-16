@@ -1,3 +1,15 @@
+## Prepare for workshop
+```
+git clone https://github.com/up1/course-imc-devops-5-days.git
+cd course-imc-devops-5-days/database
+
+# For redis workshop
+cd workshop
+
+# For postgreSQL workshop
+cd workshop-postgres
+```
+
 ## Redis workshops
 * [Single instance](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop/redis.md)
 * [Configuration](https://github.com/up1/course-imc-devops-5-days/blob/main/database/workshop/redis-config.md)
