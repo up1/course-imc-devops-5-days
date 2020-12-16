@@ -99,6 +99,7 @@ Tips
 # 2. Redis Exporter
 
 ```
+$docker-compose -f docker-compose-single.yml up -d
 $docker-compose -f docker-compose-single.yml ps
 
           Name                         Command               State           Ports
